@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.invok.idims.transaction.TransactionServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in com.invok.idims.transaction.TransactionServiceTest
+testListTransactions(com.invok.idims.transaction.TransactionServiceTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Not yet implemented
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.invok.idims.transaction.TransactionServiceTest.testListTransactions(TransactionServiceTest.java:62)
+
+testIncreaseInventoryTransaction(com.invok.idims.transaction.TransactionServiceTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Not yet implemented
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.invok.idims.transaction.TransactionServiceTest.testIncreaseInventoryTransaction(TransactionServiceTest.java:43)
+
+testDecreaseInventoryTransaction(com.invok.idims.transaction.TransactionServiceTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Not yet implemented
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.invok.idims.transaction.TransactionServiceTest.testDecreaseInventoryTransaction(TransactionServiceTest.java:51)
+

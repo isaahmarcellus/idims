@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.invok.idims.transaction.TransactionControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in com.invok.idims.transaction.TransactionControllerTest
+testTransactionList(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Not yet implemented
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.invok.idims.transaction.TransactionControllerTest.testTransactionList(TransactionControllerTest.java:37)
+
+testAddTransaction(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Not yet implemented
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.invok.idims.transaction.TransactionControllerTest.testAddTransaction(TransactionControllerTest.java:45)
+
