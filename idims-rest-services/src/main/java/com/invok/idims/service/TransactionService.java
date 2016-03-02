@@ -63,14 +63,30 @@ public class TransactionService {
 	}
 	
 	
-	/**
-	 * listTransactions
-	 * @param locationId
-	 * @param fromDate
-	 * @param toDate
-	 * @return
-	 */
 	public List<TransactionDTO> listTransactions(long locationId, Date fromDate, Date toDate) {
+		
+		List<TransactionDTO> transactions = new ArrayList<TransactionDTO>();
+		
+		List<Transaction> dbTransactions = transactionRepository.findAll();
+		
+		Iterator<Transaction> transactionIterator = dbTransactions.iterator();
+		
+		if (transactionIterator != null) {
+			while (transactionIterator.hasNext()) {
+				transactions.add(populateTransactionDTO((Transaction)transactionIterator.next()));
+			}
+
+		}
+//		transactions.add(new TransactionDTO(1, "GroundZero", "imhaynes", "inVok Citrus 12-Pack", "DEC", 2, Calendar.getInstance()));
+//		transactions.add(new TransactionDTO(2, "GroundZero", "imhaynes", "inVok Cranberry 12-Pack", "DEC", 2, Calendar.getInstance()));
+//		transactions.add(new TransactionDTO(3, "SatelliteOne", "imhaynes", "inVok Citrus 12-Pack", "DEC", 2, Calendar.getInstance()));
+//		transactions.add(new TransactionDTO(4, "SatelliteOne", "imhaynes", "inVok Cranberry 12-Pack", "DEC", 2, Calendar.getInstance()));
+		
+		return transactions;
+	}
+	
+
+	public List<TransactionDTO> listTransactions(long locationId) {
 		
 		List<TransactionDTO> transactions = new ArrayList<TransactionDTO>();
 		

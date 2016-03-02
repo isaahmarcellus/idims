@@ -1,14 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: com.invok.idims.transaction.TransactionControllerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in com.invok.idims.transaction.TransactionControllerTest
-testTransactionList(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+Tests run: 5, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 1.704 sec <<< FAILURE! - in com.invok.idims.transaction.TransactionControllerTest
+testAddIncreaseInventoryTransaction(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0.904 sec  <<< FAILURE!
 java.lang.AssertionError: Not yet implemented
 	at org.junit.Assert.fail(Assert.java:88)
-	at com.invok.idims.transaction.TransactionControllerTest.testTransactionList(TransactionControllerTest.java:37)
+	at com.invok.idims.transaction.TransactionControllerTest.testAddIncreaseInventoryTransaction(TransactionControllerTest.java:102)
 
-testAddTransaction(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+testOneItemTransactionList(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0.23 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.invok.idims.service.TransactionService.listTransactions(TransactionService.java:93)
+	at com.invok.idims.transaction.TransactionControllerTest.testOneItemTransactionList(TransactionControllerTest.java:109)
+
+testEmptyTransactionList(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0.047 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.invok.idims.service.TransactionService.listTransactions(TransactionService.java:93)
+	at com.invok.idims.transaction.TransactionControllerTest.testEmptyTransactionList(TransactionControllerTest.java:86)
+
+testAddDecreaseInventoryTransaction(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0.043 sec  <<< FAILURE!
 java.lang.AssertionError: Not yet implemented
 	at org.junit.Assert.fail(Assert.java:88)
-	at com.invok.idims.transaction.TransactionControllerTest.testAddTransaction(TransactionControllerTest.java:45)
+	at com.invok.idims.transaction.TransactionControllerTest.testAddDecreaseInventoryTransaction(TransactionControllerTest.java:122)
+
+testMultipleItemTransactionList(com.invok.idims.transaction.TransactionControllerTest)  Time elapsed: 0.061 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertNotNull(Assert.java:712)
+	at org.junit.Assert.assertNotNull(Assert.java:722)
+	at com.invok.idims.transaction.TransactionControllerTest.testMultipleItemTransactionList(TransactionControllerTest.java:136)
 

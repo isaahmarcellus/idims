@@ -36,11 +36,8 @@ public class TransactionController {
 			@RequestParam(value="to", defaultValue="") String inputToDate) throws Exception {
 		
 		int locationId = Integer.parseInt(inputLocationId);
-		
-		//SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-		//Date fromDate = !inputFromDate.equalsIgnoreCase("") ? formatter.parse(inputFromDate) : Calendar.getInstance().getTime();
-		//Date toDate = !inputToDate.equalsIgnoreCase("") ? formatter.parse(inputToDate) : Calendar.getInstance().getTime();
-		
+
+		// Will eventually allow a date range.  For now just past current dates
 		Date fromDate = Calendar.getInstance().getTime();
 		Date toDate = Calendar.getInstance().getTime();
 		
