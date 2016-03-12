@@ -40,14 +40,6 @@ public class TransactionService {
 	}
 	
 
-	/**
-	 * decreaseInventoryTransaction
-	 * @param locationId
-	 * @param userId
-	 * @param itemId
-	 * @param qty
-	 * @return
-	 */
 	public Long decreaseInventoryTransaction(long locationId, long userId, long itemId, int qty) {
 
 		Transaction transaction = new Transaction();
@@ -59,10 +51,8 @@ public class TransactionService {
 		transaction.setTimestamp(Calendar.getInstance().getTime());
 		
 		return transactionRepository.save(transaction).getTransactionId();
-		
 	}
-	
-	
+
 	public List<TransactionDTO> listTransactions(long locationId, Date fromDate, Date toDate) {
 		
 		List<TransactionDTO> transactions = new ArrayList<TransactionDTO>();
