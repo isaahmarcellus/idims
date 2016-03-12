@@ -1,0 +1,4 @@
+com\invok\idims\ApplicationTests.class
+com\invok\idims\transaction\TransactionDTOBuilder.class
+com\invok\idims\transaction\TransactionServiceTest.class
+com\invok\idims\transaction\TransactionControllerTest.class
